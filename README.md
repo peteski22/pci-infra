@@ -61,7 +61,7 @@ flowchart TB
 | midnight-proof-server | 6300 | `midnightntwrk/proof-server:7.0.0` | ZK proof generation (required for zkp) |
 | cardano-node | 3001 | `ghcr.io/intersectmbo/cardano-node:9.2.1` | Cardano preview testnet (optional) |
 | midnight-node | 9944 | `midnightntwrk/midnight-node:0.20.0` | Midnight node (optional) |
-| midnight-indexer | 8088 | `midnightntwrk/indexer-standalone:3.0.0` | Midnight indexer (optional) |
+| midnight-indexer | 8088 | `midnightntwrk/indexer-standalone:3.0.0` | Midnight indexer with bundled storage (optional) |
 
 ## Profiles
 

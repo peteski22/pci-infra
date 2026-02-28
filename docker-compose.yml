@@ -109,7 +109,7 @@ services:
     image: midnightntwrk/proof-server:7.0.0
     ports:
       - "6300:6300"
-    command: ["midnight-proof-server", "-v"]
+    command: ["midnight-proof-server", "${MIDNIGHT_PROOF_SERVER_FLAGS:-}"]
     healthcheck:
       test: ["CMD", "wget", "-q", "--spider", "http://localhost:6300/health"]
       interval: 30s
@@ -138,6 +138,8 @@ services:
     networks:
       - pci-network
 
+  # indexer-standalone bundles its own storage (no external DB required).
+  # The INDEXER_*_PASSWORD vars configure its embedded storage components.
   midnight-indexer:
     image: midnightntwrk/indexer-standalone:3.0.0
     ports:

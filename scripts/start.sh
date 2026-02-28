@@ -6,6 +6,20 @@ PROFILE=""
 # Parse arguments
 while [[ $# -gt 0 ]]; do
     case $1 in
+        --help|-h)
+            echo "Usage: start.sh [OPTIONS]"
+            echo ""
+            echo "Options:"
+            echo "  --with-cardano    Start with Cardano preview testnet node"
+            echo "  --with-midnight   Start with Midnight local node + indexer"
+            echo "  --with-nodes      Start with all blockchain nodes"
+            echo "  --standalone      Isolated Midnight environment (node + indexer)"
+            echo "  --dev             Development mode with hot reload"
+            echo "  -h, --help        Show this help message"
+            echo ""
+            echo "Environment: copy configs/example.env to .env and customize."
+            exit 0
+            ;;
         --with-cardano)
             PROFILE="--profile with-cardano"
             shift
