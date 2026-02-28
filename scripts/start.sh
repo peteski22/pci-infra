@@ -18,6 +18,10 @@ while [[ $# -gt 0 ]]; do
             PROFILE="--profile with-nodes"
             shift
             ;;
+        --standalone)
+            PROFILE="--profile standalone"
+            shift
+            ;;
         --dev)
             DEV="-f docker-compose.yml -f docker-compose.dev.yml"
             shift
