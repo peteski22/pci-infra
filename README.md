@@ -1,3 +1,5 @@
+> **Archived 2026-10-16.** This repository has moved to [peteski22/freehold](https://github.com/peteski22/freehold/tree/main/infra). Open issues were transferred there and full history is preserved. This copy is read-only.
+
 # PCI Infrastructure
 
 Infrastructure orchestration for PCI development and testing.
